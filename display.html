@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Display</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="display-body">
+
+<header class="display-header">
+
+    <div class="logo">
+        🍔 <span>Smart</span>Canteen
+    </div>
+
+    <div>
+        TODAY'S FOOD MENU
+    </div>
+
+    <div id="clock"></div>
+
+</header>
+
+
+<main class="display-page">
+
+    <div class="display-title">
+
+        <div class="tag">WELCOME STUDENTS</div>
+
+        <h1>Today's Fresh Food 🍽️</h1>
+
+        <p>
+            Order online • Get your token • Scan & Collect
+        </p>
+
+    </div>
+
+
+    <section class="display-foods">
+
+        <div class="display-food">
+
+            <div>🍛</div>
+
+            <h2>Chicken Rice</h2>
+
+            <strong>₹90</strong>
+
+            <span class="available">
+                ● AVAILABLE
+            </span>
+
+        </div>
+
+
+        <div class="display-food">
+
+            <div>🍚</div>
+
+            <h2>Veg Meals</h2>
+
+            <strong>₹70</strong>
+
+            <span class="available">
+                ● AVAILABLE
+            </span>
+
+        </div>
+
+
+        <div class="display-food">
+
+            <div>🍔</div>
+
+            <h2>Veg Burger</h2>
+
+            <strong>₹60</strong>
+
+            <span class="available">
+                ● AVAILABLE
+            </span>
+
+        </div>
+
+
+        <div class="display-food">
+
+            <div>🍟</div>
+
+            <h2>French Fries</h2>
+
+            <strong>₹50</strong>
+
+            <span class="available">
+                ● AVAILABLE
+            </span>
+
+        </div>
+
+
+        <div class="display-food">
+
+            <div>🥤</div>
+
+            <h2>Fresh Juice</h2>
+
+            <strong>₹30</strong>
+
+            <span class="limited">
+                ● FEW LEFT
+            </span>
+
+        </div>
+
+
+        <div class="display-food special">
+
+            <div>⭐🍗</div>
+
+            <h2>Today's Special</h2>
+
+            <strong>₹110</strong>
+
+            <span class="available">
+                SPECIAL COMBO
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <div class="pickup-bar">
+
+        🎟️ NOW SERVING TOKENS:
+
+        <strong>
+            021 • 022 • 023
+        </strong>
+
+    </div>
+
+</main>
+
+<script>
+
+function updateClock() {
+
+    const now = new Date();
+
+    document.getElementById("clock").innerText =
+        now.toLocaleTimeString();
+
+}
+
+setInterval(updateClock, 1000);
+
+updateClock();
+
+</script>
+
+</body>
+</html>
