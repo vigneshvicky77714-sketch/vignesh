@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Menu</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        🍔 <span>Smart</span>Canteen
+    </div>
+
+    <nav>
+        <a href="menu.html">Menu</a>
+        <a href="profile.html">Profile</a>
+        <a href="admin.html">Admin</a>
+    </nav>
+
+</header>
+
+<main class="page">
+
+    <div class="heading">
+
+        <div class="tag">TODAY'S MENU</div>
+
+        <h1>Choose Your Food 🍴</h1>
+
+        <p>Fresh food. Fast ordering.</p>
+
+    </div>
+
+    <div class="categories">
+
+        <button onclick="showCategory('all')">All</button>
+        <button onclick="showCategory('rice')">Rice</button>
+        <button onclick="showCategory('snack')">Snacks</button>
+        <button onclick="showCategory('drink')">Drinks</button>
+        <button onclick="showCategory('dessert')">Desserts</button>
+
+    </div>
+
+    <div class="menu-layout">
+
+        <section class="food-grid">
+
+            <div class="food-card" data-category="rice">
+
+                <div class="food-picture">🍛</div>
+
+                <h3>Chicken Rice</h3>
+
+                <p>Special chicken rice</p>
+
+                <strong>₹90</strong>
+
+                <button onclick="addCart('Chicken Rice',90)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="food-card" data-category="rice">
+
+                <div class="food-picture">🍚</div>
+
+                <h3>Veg Meals</h3>
+
+                <p>Traditional South Indian meals</p>
+
+                <strong>₹70</strong>
+
+                <button onclick="addCart('Veg Meals',70)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="food-card" data-category="snack">
+
+                <div class="food-picture">🍔</div>
+
+                <h3>Veg Burger</h3>
+
+                <p>Crispy vegetable burger</p>
+
+                <strong>₹60</strong>
+
+                <button onclick="addCart('Veg Burger',60)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="food-card" data-category="snack">
+
+                <div class="food-picture">🍟</div>
+
+                <h3>French Fries</h3>
+
+                <p>Crispy golden fries</p>
+
+                <strong>₹50</strong>
+
+                <button onclick="addCart('French Fries',50)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="food-card" data-category="drink">
+
+                <div class="food-picture">🥤</div>
+
+                <h3>Fresh Juice</h3>
+
+                <p>Fresh fruit juice</p>
+
+                <strong>₹30</strong>
+
+                <button onclick="addCart('Fresh Juice',30)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="food-card" data-category="dessert">
+
+                <div class="food-picture">🍰</div>
+
+                <h3>Chocolate Cake</h3>
+
+                <p>Soft chocolate cake</p>
+
+                <strong>₹50</strong>
+
+                <button onclick="addCart('Chocolate Cake',50)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <aside class="cart-box">
+
+            <h2>🛒 Your Cart</h2>
+
+            <div id="cartItems">
+                Cart is empty
+            </div>
+
+            <hr>
+
+            <h3>
+                Total: ₹<span id="total">0</span>
+            </h3>
+
+            <button class="btn full" onclick="checkout()">
+                Proceed to Order
+            </button>
+
+        </aside>
+
+    </div>
+
+</main>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
