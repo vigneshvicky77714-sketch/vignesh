@@ -1,0 +1,664 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --orange: #ff6b35;
+    --dark: #17202a;
+    --cream: #fff8f3;
+    --white: #ffffff;
+    --gray: #6b7280;
+    --green: #20a464;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+}
+
+.navbar {
+    height: 75px;
+    background: white;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--orange);
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--dark);
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.btn {
+    background: var(--orange);
+    color: white;
+    padding: 13px 22px;
+    border-radius: 10px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.big-btn {
+    padding: 16px 28px;
+}
+
+.outline-btn {
+    display: inline-block;
+    color: var(--orange);
+    background: white;
+    border: 2px solid var(--orange);
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.full {
+    width: 100%;
+    margin-top: 12px;
+}
+
+/* HOME */
+
+.hero {
+    min-height: calc(100vh - 75px);
+    padding: 70px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.tag {
+    color: var(--orange);
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 64px;
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: var(--orange);
+}
+
+.hero p {
+    color: var(--gray);
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.logo-showcase {
+    text-align: center;
+}
+
+.food-logo {
+    width: 300px;
+    height: 300px;
+    background: #ffe0d0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 130px;
+    box-shadow: 0 25px 60px #0002;
+}
+
+.logo-showcase h2 {
+    margin-top: -55px;
+    position: relative;
+}
+
+.logo-showcase p {
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--gray);
+}
+
+/* LOGIN */
+
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-card {
+    width: 430px;
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 15px 50px #0002;
+    text-align: center;
+}
+
+.auth-icon {
+    font-size: 50px;
+}
+
+.auth-card p {
+    color: var(--gray);
+    margin: 10px 0 20px;
+}
+
+.auth-card input,
+.order-card select {
+    width: 100%;
+    padding: 14px;
+    margin: 6px 0;
+    border: 1px solid #ddd;
+    border-radius: 9px;
+}
+
+.line {
+    margin: 25px 0;
+    color: var(--gray);
+}
+
+.back {
+    display: block;
+    margin-top: 20px;
+    color: var(--orange);
+}
+
+/* COMMON */
+
+.page {
+    padding: 50px 7%;
+}
+
+.heading {
+    margin-bottom: 30px;
+}
+
+.heading h1 {
+    font-size: 40px;
+}
+
+.heading p {
+    color: var(--gray);
+    margin-top: 8px;
+}
+
+/* MENU */
+
+.categories {
+    margin-bottom: 25px;
+}
+
+.categories button {
+    border: none;
+    background: white;
+    padding: 10px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.menu-layout {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 25px;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.food-card {
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px #0001;
+}
+
+.food-picture {
+    height: 140px;
+    background: #fff0e8;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 75px;
+    margin-bottom: 15px;
+}
+
+.food-card p {
+    color: var(--gray);
+    margin: 8px 0;
+}
+
+.food-card strong {
+    font-size: 20px;
+}
+
+.food-card button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 11px;
+    background: var(--orange);
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.cart-box {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+}
+
+/* ORDER */
+
+.order-card {
+    max-width: 600px;
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    margin: auto;
+    box-shadow: 0 15px 50px #0002;
+}
+
+.order-card label {
+    display: block;
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+/* TOKEN */
+
+.token-page {
+    padding: 50px 20px;
+}
+
+.token-card {
+    max-width: 550px;
+    background: white;
+    padding: 40px;
+    margin: auto;
+    text-align: center;
+    border-radius: 25px;
+    box-shadow: 0 15px 50px #0002;
+}
+
+.success {
+    color: var(--green);
+    font-weight: bold;
+}
+
+.token-number {
+    font-size: 100px;
+    color: var(--orange);
+    font-weight: bold;
+    margin: 20px;
+}
+
+.qr {
+    background: #f3f3f3;
+    padding: 20px;
+    width: 250px;
+    margin: 25px auto;
+}
+
+.qr-pattern {
+    font-size: 25px;
+    line-height: 1.3;
+    font-family: monospace;
+}
+
+.steps {
+    text-align: left;
+    max-width: 280px;
+    margin: 25px auto;
+    line-height: 2.3;
+}
+
+.steps .active {
+    color: var(--green);
+    font-weight: bold;
+}
+
+/* ADMIN */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px #0001;
+}
+
+.stat span {
+    font-size: 30px;
+}
+
+.stat h2 {
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.stat p {
+    color: var(--gray);
+}
+
+.admin-card,
+.history,
+.profile,
+.chart-card,
+.conclusion {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px #0001;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.admin-actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.action-card {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    text-decoration: none;
+    color: var(--dark);
+    box-shadow: 0 8px 25px #0001;
+}
+
+.action-card:first-letter {
+    font-size: 30px;
+}
+
+.action-card p {
+    color: var(--gray);
+    margin-top: 8px;
+}
+
+/* PROFILE */
+
+.profile {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.avatar {
+    font-size: 70px;
+}
+
+.profile p {
+    color: var(--gray);
+    margin-top: 8px;
+}
+
+.history-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.history-row p {
+    color: var(--gray);
+    margin-top: 5px;
+}
+
+.completed {
+    display: block;
+    color: var(--green);
+    margin-top: 5px;
+}
+
+/* IMPACT */
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.chart {
+    height: 250px;
+    display: flex;
+    align-items: end;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.chart div {
+    width: 45px;
+    background: var(--orange);
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.conclusion p {
+    color: var(--gray);
+    line-height: 1.7;
+    margin: 15px 0;
+}
+
+.conclusion h3 {
+    color: var(--orange);
+}
+
+/* FOOD DISPLAY */
+
+.display-body {
+    background: #111820;
+    color: white;
+}
+
+.display-header {
+    height: 80px;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #18222d;
+}
+
+.display-page {
+    padding: 35px 5%;
+}
+
+.display-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.display-title h1 {
+    font-size: 45px;
+}
+
+.display-title p {
+    color: #aaa;
+    margin-top: 10px;
+}
+
+.display-foods {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.display-food {
+    background: #202c38;
+    padding: 25px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.display-food > div {
+    font-size: 70px;
+}
+
+.display-food h2 {
+    margin: 10px 0;
+}
+
+.display-food strong {
+    display: block;
+    font-size: 25px;
+}
+
+.available {
+    display: block;
+    color: #35d07f;
+    margin-top: 10px;
+}
+
+.limited {
+    display: block;
+    color: #ffc857;
+    margin-top: 10px;
+}
+
+.special {
+    border: 2px solid var(--orange);
+}
+
+.pickup-bar {
+    background: var(--orange);
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+/* MOBILE */
+
+@media(max-width: 900px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .menu-layout,
+    .impact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .food-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .display-foods {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 600px) {
+
+    .food-grid,
+    .display-foods,
+    .stats,
+    .admin-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .navbar nav a {
+        margin-left: 5px;
+        font-size: 12px;
+    }
+
+    .food-logo {
+        width: 230px;
+        height: 230px;
+        font-size: 90px;
+    }
+
+    .auth-card {
+        width: 90%;
+    }
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .page {
+        padding: 35px 20px;
+    }
+}
